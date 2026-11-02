@@ -170,3 +170,307 @@
       <div class="info-row">
         <span>माता श्रीमती : <span id="mMother" class="dotted-data"></span></span>
         <span>जाति : <span id="mCaste" class="dotted-data"></span></span>
+      </div>
+      <div class="info-row">
+        <span>जन्मतिथि (अंकों में) : <span id="mDob" class="dotted-data"></span></span>
+        <span>(शब्दों में) : <span id="mDobWords" class="dotted-data"></span></span>
+      </div>
+      <div>शाला का नाम : <span id="mSchool" class="dotted-data"></span></div>
+      <div>परीक्षा केन्द्र का नाम : <span id="mCenter" class="dotted-data"></span></div>
+      <div style="font-weight: bold; margin-top: 2px; text-align: center;">से कक्षा 11वीं वार्षिक परीक्षा 2026 में सम्मिलित हुए</div>
+    </div>
+
+    <div class="student-photo-container">
+      <img id="mStudentPhoto" src="" alt="Photo" onerror="this.onerror=null; this.src='https://via.placeholder.com/80x95?text=फोटो';">
+    </div>
+  </div>
+
+  <div style="text-align: center; font-weight: bold; background: #e2e8f0; border: 1px solid #111; padding: 2px; font-size: 11px;">परीक्षा परिणाम</div>
+
+  <div class="main-grid" style="margin-top: 3px;">
+    <div>
+      <table class="marks-table">
+        <thead>
+          <tr>
+            <th colspan="8" class="sub-head">शैक्षणिक विषयवार मूल्यांकन</th>
+          </tr>
+          <tr>
+            <th rowspan="2" style="width: 27%;">विषय</th>
+            <th rowspan="2" style="width: 9%;">त्रैमासिक<br>(50)</th>
+            <th rowspan="2" style="width: 10%;">अर्द्धवार्षिक<br>(100)</th>
+            <th colspan="3">वार्षिक परीक्षा (100 अंक)</th>
+            <th rowspan="2" style="width: 13%;">वार्षिक कुल<br>(100)</th>
+            <th rowspan="2" style="width: 11%;">ग्रेड</th>
+          </tr>
+          <tr>
+            <th style="width: 10%;">सैद्धांतिक</th>
+            <th style="width: 10%;">प्रायोगिक</th>
+            <th style="width: 10%;">योग</th>
+          </tr>
+        </thead>
+        <tbody id="subjectRows"></tbody>
+        <tfoot>
+          <tr style="font-weight: bold; background: #f8fafc;">
+            <td>महायोग</td>
+            <td id="totQtr"></td>
+            <td id="totHalf"></td>
+            <td id="totAnnTh"></td>
+            <td id="totAnnPr"></td>
+            <td id="totAnnSubSum"></td>
+            <td id="totFinalMarks" style="font-size: 11.5px;"></td>
+            <td id="totGrade"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div>
+      <table style="height: 100%;">
+        <thead>
+          <tr>
+            <th colspan="2" class="sub-head">सह-शैक्षणिक क्षेत्र</th>
+          </tr>
+          <tr>
+            <th>विषय</th>
+            <th>ग्रेड</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>खेलकूद</td><td id="g1"></td></tr>
+          <tr><td>योग/प्राणायाम</td><td id="g2"></td></tr>
+          <tr><td>साहित्यिक</td><td id="g3"></td></tr>
+          <tr><td>सांस्कृतिक</td><td id="g4"></td></tr>
+          <tr><td>मूल्यांकन</td><td id="g5"></td></tr>
+          <tr><td>पर्यावरण</td><td id="g6"></td></tr>
+          <tr><td>अनुशासन</td><td id="g7"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="summary-section">
+    <div class="summary-text">
+      <p><strong>वार्षिक कुल प्राप्तांक :</strong> <span id="sTotal" class="dotted-data" style="font-size: 12px;"></span> (पूर्णांक: 500) &nbsp;&nbsp;&nbsp;&nbsp; <strong>शब्दों में :</strong> <span id="sTotalWords" class="dotted-data"></span></p>
+      <p><strong>प्रतिशत :</strong> <span id="sPercent" class="dotted-data"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>श्रेणी :</strong> <span id="sDivision" class="dotted-data"></span></p>
+      <p><strong>परीक्षाफल :</strong> <span id="sStatus" class="dotted-data" style="font-weight: 800;"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>ग्रेड :</strong> <span id="sGrade" class="dotted-data"></span></p>
+      <p><strong>पूरक के विषय :</strong> <span id="sPurak" class="dotted-data">निरंक</span></p>
+    </div>
+
+    <div>
+      <table style="font-size: 8px;">
+        <tr style="background: #334155; color: white;"><th colspan="2">ग्रेड स्केल (100 अंक)</th></tr>
+        <tr><th>प्रतिशत</th><th>ग्रेड</th></tr>
+        <tr><td>91 से अधिक</td><td>A+</td></tr>
+        <tr><td>81 से 90</td><td>A</td></tr>
+        <tr><td>71 से 80</td><td>B+</td></tr>
+        <tr><td>61 से 70</td><td>B</td></tr>
+        <tr><td>51 से 60</td><td>C+</td></tr>
+        <tr><td>41 से 50</td><td>C</td></tr>
+        <tr><td>33 से 40</td><td>D</td></tr>
+        <tr><td>33 से नीचे</td><td>E</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="sign-row">
+    <div>हस्ताक्षर -<br>कक्षाध्यापक</div>
+    <div>हस्ताक्षर -<br>परीक्षा प्रभारी</div>
+    <div>हस्ताक्षर व सील -<br>प्राचार्य</div>
+  </div>
+
+</div>
+
+<div class="print-btn-bar">
+  <button onclick="window.print()" style="padding: 7px 20px; font-size: 13px; font-weight: bold; background: #0f172a; color: white; border: none; border-radius: 4px; cursor: pointer;">अंकसूची प्रिंट करें (Print A4)</button>
+</div>
+
+<script>
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzCRY6rYj16T2b17NqLgNWtTHhvd3VqBLLswF3GG9AP68iHkKFIlAgEGzGTCu2tVpmPYw/exec";
+
+  function getGrade(val) {
+    val = Number(val) || 0;
+    if (val >= 91) return "A+";
+    if (val >= 81) return "A";
+    if (val >= 71) return "B+";
+    if (val >= 61) return "B";
+    if (val >= 51) return "C+";
+    if (val >= 41) return "C";
+    if (val >= 33) return "D";
+    return "E";
+  }
+
+  function formatDOB(dobStr) {
+    if (!dobStr) return "-";
+    if (String(dobStr).includes("T")) {
+      const dt = new Date(dobStr);
+      if (!isNaN(dt.getTime())) {
+        const d = String(dt.getDate()).padStart(2, '0');
+        const m = String(dt.getMonth() + 1).padStart(2, '0');
+        const y = dt.getFullYear();
+        return `${d}/${m}/${y}`;
+      }
+    }
+    return dobStr;
+  }
+
+  function setElementText(id, text) {
+    const el = document.getElementById(id);
+    if (el) el.innerText = (text !== undefined && text !== null && text !== "") ? text : "-";
+  }
+
+  async function searchResult() {
+    const roll = document.getElementById("rollInput").value.trim();
+    const msg = document.getElementById("msg");
+    const sheet = document.getElementById("marksheetArea");
+
+    if (!roll) {
+      msg.style.color = "red";
+      msg.innerText = "कृपया अनुक्रमांक (Roll No) दर्ज करें!";
+      return;
+    }
+
+    msg.style.color = "blue";
+    msg.innerText = "कृपया प्रतीक्षा करें, परिणाम लोड हो रहा है...";
+    sheet.style.display = "none";
+
+    try {
+      const res = await fetch(`${SCRIPT_URL}?roll=${encodeURIComponent(roll)}`);
+      const json = await res.json();
+
+      if (json && json.status === "success" && json.data) {
+        msg.innerText = "";
+        const d = json.data;
+
+        // Top Details
+        setElementText("mCertNo", d.EnrollmentNo || d.PramanPatraNo);
+        setElementText("mAdmissionNo", d.DakhilKharij);
+        setElementText("mStream", d.Stream);
+        setElementText("mMedium", d.Medium || "हिन्दी");
+        setElementText("mRoll", d.RollNo || roll);
+        setElementText("mUdise", d.UDise);
+        setElementText("mPen", d.PenNo);
+        setElementText("mApaar", d.ApaarId);
+
+        // Student Info
+        setElementText("mName", d.StudentName || d.Name);
+        setElementText("mFather", d.FatherName);
+        setElementText("mMother", d.MotherName);
+        setElementText("mCaste", d.Caste);
+        setElementText("mDob", formatDOB(d.DOB));
+        setElementText("mDobWords", d.DOB_Words);
+        setElementText("mSchool", d.SchoolName);
+        setElementText("mCenter", d.CenterName);
+
+        // Photo
+        const photoEl = document.getElementById("mStudentPhoto");
+        if (photoEl) photoEl.src = "photos/" + roll + ".jpg";
+
+        // Subject Mapping directly from Sheet columns
+        const subjects = [
+          { name: d.SUB1_Name || "विषय 1", passTh: Number(d.SUB1_PassTH) || 27, qtr: d.SUB1_QTR, half: d.SUB1_HALF, th: d.SUB1_ANN_TH, pr: d.SUB1_ANN_PR },
+          { name: d.SUB2_Name || "विषय 2", passTh: Number(d.SUB2_PassTH) || 27, qtr: d.SUB2_QTR, half: d.SUB2_HALF, th: d.SUB2_ANN_TH, pr: d.SUB2_ANN_PR },
+          { name: d.SUB3_Name || "विषय 3", passTh: Number(d.SUB3_PassTH) || 23, qtr: d.SUB3_QTR, half: d.SUB3_HALF, th: d.SUB3_ANN_TH, pr: d.SUB3_ANN_PR },
+          { name: d.SUB4_Name || "विषय 4", passTh: Number(d.SUB4_PassTH) || 23, qtr: d.SUB4_QTR, half: d.SUB4_HALF, th: d.SUB4_ANN_TH, pr: d.SUB4_ANN_PR },
+          { name: d.SUB5_Name || "विषय 5", passTh: Number(d.SUB5_PassTH) || 27, qtr: d.SUB5_QTR, half: d.SUB5_HALF, th: d.SUB5_ANN_TH, pr: d.SUB5_ANN_PR }
+        ];
+
+        let rowsHtml = "";
+        let sumQtr = 0, sumHalf = 0, sumTh = 0, sumPr = 0, grandTotal = 0;
+        let failSubjects = [];
+
+        subjects.forEach(s => {
+          const qtr = Number(s.qtr) || 0;
+          const half = Number(s.half) || 0;
+          const th = Number(s.th) || 0;
+          const pr = Number(s.pr) || 0;
+          const annTot = th + pr;
+          const grade = getGrade(annTot);
+
+          sumQtr += qtr;
+          sumHalf += half;
+          sumTh += th;
+          sumPr += pr;
+          grandTotal += annTot;
+
+          // Theory Passing Rule (23 in 70 or 27 in 80)
+          let isThFail = th < s.passTh;
+          if (isThFail || annTot < 33) {
+            failSubjects.push(s.name);
+          }
+
+          rowsHtml += `<tr>
+            <td class="sub-name">${s.name}</td>
+            <td>${qtr}</td>
+            <td>${half}</td>
+            <td style="${isThFail ? 'color: red; font-weight: bold;' : ''}">${th}</td>
+            <td>${pr}</td>
+            <td>${annTot}</td>
+            <td><b>${annTot}</b></td>
+            <td>${grade}</td>
+          </tr>`;
+        });
+
+        const rowsContainer = document.getElementById("subjectRows");
+        if (rowsContainer) rowsContainer.innerHTML = rowsHtml;
+
+        setElementText("totQtr", sumQtr);
+        setElementText("totHalf", sumHalf);
+        setElementText("totAnnTh", sumTh);
+        setElementText("totAnnPr", sumPr);
+        setElementText("totAnnSubSum", grandTotal);
+        setElementText("totFinalMarks", grandTotal);
+
+        const pct = ((grandTotal / 500) * 100).toFixed(2);
+        setElementText("totGrade", getGrade(Number(pct)));
+
+        // Co-Curricular
+        setElementText("g1", d.G_Sports || "A");
+        setElementText("g2", d.G_Yoga || "A");
+        setElementText("g3", d.G_Lit || "B");
+        setElementText("g4", d.G_Cult || "A");
+        setElementText("g5", d.G_Eval || "B");
+        setElementText("g6", d.G_Env || "A");
+        setElementText("g7", d.G_Art || "A");
+
+        // Summary
+        setElementText("sTotal", grandTotal);
+        setElementText("sTotalWords", d.TotalWords || "-");
+        setElementText("sPercent", pct + "%");
+
+        let status = "उत्तीर्ण";
+        let division = "-";
+        let purak = "निरंक";
+
+        const statusEl = document.getElementById("sStatus");
+        if (failSubjects.length === 0) {
+          status = "उत्तीर्ण";
+          division = pct >= 60 ? "प्रथम" : (pct >= 45 ? "द्वितीय" : "तृतीय");
+          if (statusEl) statusEl.style.color = "green";
+        } else if (failSubjects.length <= 2) {
+          status = "पूरक";
+          purak = failSubjects.join(", ");
+          if (statusEl) statusEl.style.color = "#d97706";
+        } else {
+          status = "अनुत्तीर्ण";
+          if (statusEl) statusEl.style.color = "red";
+        }
+
+        setElementText("sStatus", status);
+        setElementText("sDivision", division);
+        setElementText("sGrade", getGrade(Number(pct)));
+        setElementText("sPurak", purak);
+
+        sheet.style.display = "block";
+      } else {
+        msg.style.color = "red";
+        msg.innerText = "दर्ज किया गया अनुक्रमांक नहीं मिला!";
+      }
+    } catch (err) {
+      msg.style.color = "red";
+      msg.innerText = "डेटा लोड करने में समस्या आई: " + err.message;
+    }
+  }
+</script>
+
+</body>
+</html>
