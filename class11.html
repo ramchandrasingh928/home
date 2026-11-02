@@ -6,87 +6,87 @@
   <title>कक्षा 11वीं परीक्षा अंकसूची 2026</title>
   <style>
     * { box-sizing: border-box; font-family: 'Arial Unicode MS', 'Nirmala UI', sans-serif; }
-    body { background-color: #f1f5f9; margin: 0; padding: 10px; color: #111; }
+    body { background-color: #f1f5f9; margin: 0; padding: 12px; color: #111; }
     
     .search-panel { 
-      max-width: 820px; 
-      margin: 0 auto 10px auto; 
+      max-width: 860px; 
+      margin: 0 auto 12px auto; 
       background: #fff; 
-      padding: 10px 15px; 
-      border-radius: 6px; 
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+      padding: 12px 18px; 
+      border-radius: 8px; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
       display: flex; 
-      gap: 10px; 
+      gap: 12px; 
       align-items: center; 
     }
     .search-panel input { 
       flex: 1; 
-      padding: 8px 12px; 
-      font-size: 14px; 
+      padding: 10px 14px; 
+      font-size: 15px; 
       border: 1px solid #94a3b8; 
-      border-radius: 4px; 
+      border-radius: 5px; 
       outline: none;
     }
     .search-panel button { 
       background: #15803d; 
       color: #fff; 
       border: none; 
-      padding: 8px 18px; 
-      font-size: 14px; 
+      padding: 10px 22px; 
+      font-size: 15px; 
       font-weight: bold; 
-      border-radius: 4px; 
+      border-radius: 5px; 
       cursor: pointer; 
     }
-    #msg { text-align: center; font-weight: bold; margin-bottom: 8px; font-size: 13px; }
+    #msg { text-align: center; font-weight: bold; margin-bottom: 10px; font-size: 14px; }
 
-    /* A4 Single Page Perfect Fit */
+    /* A4 Perfect Fit Wrapper */
     .sheet-wrapper { 
       display: none; 
       width: 100%;
-      max-width: 800px; 
+      max-width: 860px; 
       margin: 0 auto; 
       background: #fff; 
       border: 4px double #1e3a8a; 
-      padding: 8px 12px; 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12); 
+      padding: 14px 18px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.12); 
     }
 
     /* Header Center Aligned */
-    .header-box { border-bottom: 2px solid #222; padding-bottom: 4px; margin-bottom: 4px; }
+    .header-box { border-bottom: 2px solid #222; padding-bottom: 6px; margin-bottom: 6px; }
     .header-content { display: flex; align-items: center; justify-content: center; position: relative; }
-    .school-logo-img { width: 62px; height: 62px; object-fit: contain; position: absolute; left: 0; }
-    .header-text { text-align: center; width: 100%; padding: 0 65px; }
-    .dept-title { font-size: 28px; font-weight: 800; color: #F45201; margin: 0; line-height: 1.2; text-align: center; }
-    .exam-title { font-size: 18px; font-weight: 800; color: #1e3a8a; margin: 2px 0; text-align: center; }
-    .cert-badge { display: inline-block; background: #b91c1c; color: white; padding: 1px 12px; font-size: 16px; font-weight: bold; border-radius: 3px; }
-    .district-badge { background: #334155; color: white; padding: 1px 10px; font-size: 11px; font-weight: bold; border-radius: 3px; display: inline-block; }
+    .school-logo-img { width: 75px; height: 75px; object-fit: contain; position: absolute; left: 0; }
+    .header-text { text-align: center; width: 100%; padding: 0 80px; }
+    .dept-title { font-size: 24px; font-weight: 800; color: #F45201; margin: 0; line-height: 1.25; text-align: center; }
+    .exam-title { font-size: 17px; font-weight: 800; color: #1e3a8a; margin: 3px 0; text-align: center; }
+    .cert-badge { display: inline-block; background: #b91c1c; color: white; padding: 2px 16px; font-size: 14px; font-weight: bold; border-radius: 4px; margin-top: 2px; }
+    .district-badge { background: #334155; color: white; padding: 2px 14px; font-size: 13px; font-weight: bold; border-radius: 3px; display: inline-block; }
 
     /* Tables */
-    table { width: 100%; border-collapse: collapse; font-size: 10.5px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
     table, th, td { border: 1px solid #111; }
-    th, td { padding: 3px 2px; text-align: center; line-height: 1.15; }
-    .top-info-table { margin-bottom: 4px; }
-    .top-info-table td { font-weight: bold; font-size: 10px; padding: 2px 4px; }
+    th, td { padding: 5px 3px; text-align: center; line-height: 1.2; }
+    .top-info-table { margin-bottom: 6px; }
+    .top-info-table td { font-weight: bold; font-size: 12.5px; padding: 4px 6px; }
 
     /* Student Block */
     .student-block-wrapper {
       display: flex;
       border: 1px solid #111;
-      padding: 5px 8px;
-      margin-bottom: 4px;
+      padding: 8px 12px;
+      margin-bottom: 6px;
       background: #fff;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
     }
-    .student-details { flex: 1; font-size: 11.5px; line-height: 1.55; text-align: left; }
+    .student-details { flex: 1; font-size: 13.5px; line-height: 1.7; text-align: left; }
     .info-row { display: flex; justify-content: space-between; }
-    .dotted-data { font-weight: bold; padding: 0 4px; color: #000; }
+    .dotted-data { font-weight: bold; padding: 0 5px; color: #000; }
 
     .student-photo-container {
-      width: 80px;
-      height: 95px;
+      width: 95px;
+      height: 115px;
       border: 1px solid #111;
-      padding: 1px;
+      padding: 2px;
       background: #fff;
       display: flex;
       align-items: center;
@@ -95,19 +95,24 @@
     .student-photo-container img { width: 100%; height: 100%; object-fit: cover; }
 
     /* Marks Table Grid */
-    .main-grid { display: grid; grid-template-columns: 80% 20%; gap: 4px; }
-    .sub-head { background: #334155; color: white; font-size: 11px; padding: 2px; font-weight: bold; }
-    .marks-table th { background: #f8fafc; font-size: 9.5px; }
-    .marks-table td.sub-name { text-align: left; font-weight: 600; padding-left: 4px; }
+    .main-grid { display: grid; grid-template-columns: 78% 22%; gap: 6px; }
+    .sub-head { background: #334155; color: white; font-size: 13px; padding: 4px; font-weight: bold; }
+    .marks-table th { background: #f8fafc; font-size: 12px; font-weight: 700; }
+    .marks-table td { font-size: 12.5px; }
+    .marks-table td.sub-name { text-align: left; font-weight: 700; padding-left: 6px; font-size: 13px; }
 
     /* Summary */
-    .summary-section { margin-top: 4px; display: grid; grid-template-columns: 74% 26%; gap: 6px; font-size: 10.5px; }
-    .summary-text p { margin: 2px 0; font-size: 11px; }
+    .summary-section { margin-top: 8px; display: grid; grid-template-columns: 72% 28%; gap: 8px; font-size: 12.5px; }
+    .summary-text p { margin: 4px 0; font-size: 13.5px; }
     
-    .sign-row { margin-top: 24px; display: flex; justify-content: space-between; font-weight: bold; font-size: 10px; text-align: center; }
-    .print-btn-bar { text-align: center; margin-top: 8px; }
+    .sign-row { margin-top: 45px; display: flex; justify-content: space-between; font-weight: bold; font-size: 12.5px; text-align: center; }
+    .print-btn-bar { text-align: center; margin-top: 15px; }
 
-    @page { size: A4 portrait; margin: 6mm 5mm; }
+    /* A4 Portrait Optimization */
+    @page { 
+      size: A4 portrait; 
+      margin: 10mm 8mm; 
+    }
     @media print {
       body { background: none; padding: 0; margin: 0; }
       .search-panel, .print-btn-bar, #msg { display: none !important; }
@@ -117,7 +122,7 @@
         box-shadow: none; 
         width: 100% !important; 
         max-width: 100% !important; 
-        padding: 4px !important;
+        padding: 10px 14px !important;
         page-break-inside: avoid;
       }
     }
@@ -136,14 +141,17 @@
   
   <div class="header-box">
     <div class="header-content">
-      <img src="logo.png" alt="Logo" class="school-logo-img" onerror="this.style.display='none'">
+      <img src="logo.png" 
+           alt="Logo" 
+           class="school-logo-img" 
+           onerror="if (!this.triedJpg) { this.triedJpg = true; this.src = 'logo.jpg'; } else { this.style.display = 'none'; }">
       <div class="header-text">
         <div class="dept-title">सरस्वती शिशु मंदिर उच्चतर माध्यमिक विद्यालय रामानुजगंज</div>
         <div class="exam-title">उच्चतर माध्यमिक प्रमाण पत्र परीक्षा (कक्षा 11वीं) - 2026</div>
         <div><span class="cert-badge">प्रमाण पत्र सह अंकसूची</span></div>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 3px;">
+    <div style="text-align: center; margin-top: 4px;">
       <span class="district-badge">जिला बलरामपुर - रामानुजगंज (छ.ग.)</span>
     </div>
   </div>
@@ -165,7 +173,7 @@
 
   <div class="student-block-wrapper">
     <div class="student-details">
-      <div>प्रमाणित किया जाता है कि श्री/कुमारी : <span id="mName" class="dotted-data" style="font-size: 12.5px;"></span></div>
+      <div>प्रमाणित किया जाता है कि श्री/कुमारी : <span id="mName" class="dotted-data" style="font-size: 15px;"></span></div>
       <div>पिता श्री : <span id="mFather" class="dotted-data"></span></div>
       <div class="info-row">
         <span>माता श्रीमती : <span id="mMother" class="dotted-data"></span></span>
@@ -177,35 +185,34 @@
       </div>
       <div>शाला का नाम : <span id="mSchool" class="dotted-data"></span></div>
       <div>परीक्षा केन्द्र का नाम : <span id="mCenter" class="dotted-data"></span></div>
-      <div style="font-weight: bold; margin-top: 2px; text-align: center;">से कक्षा 11वीं वार्षिक परीक्षा 2026 में सम्मिलित हुए</div>
+      <div style="font-weight: bold; margin-top: 4px; text-align: center; font-size: 14px;">से कक्षा 11वीं वार्षिक परीक्षा 2026 में सम्मिलित हुए</div>
     </div>
 
     <div class="student-photo-container">
-      <img id="mStudentPhoto" src="" alt="Photo" onerror="this.onerror=null; this.src='https://via.placeholder.com/80x95?text=फोटो';">
+      <img id="mStudentPhoto" src="" alt="Photo" onerror="this.onerror=null; this.src='https://via.placeholder.com/95x115?text=फोटो';">
     </div>
   </div>
 
-  <div style="text-align: center; font-weight: bold; background: #e2e8f0; border: 1px solid #111; padding: 2px; font-size: 11px;">परीक्षा परिणाम</div>
+  <div style="text-align: center; font-weight: bold; background: #e2e8f0; border: 1px solid #111; padding: 4px; font-size: 13px;">परीक्षा परिणाम</div>
 
-  <div class="main-grid" style="margin-top: 3px;">
+  <div class="main-grid" style="margin-top: 4px;">
     <div>
       <table class="marks-table">
         <thead>
           <tr>
-            <th colspan="8" class="sub-head">शैक्षणिक विषयवार मूल्यांकन</th>
+            <th colspan="7" class="sub-head">शैक्षणिक विषयवार मूल्यांकन</th>
           </tr>
           <tr>
-            <th rowspan="2" style="width: 27%;">विषय</th>
-            <th rowspan="2" style="width: 9%;">त्रैमासिक<br>(100)</th>
-            <th rowspan="2" style="width: 10%;">अर्द्धवार्षिक<br>(100)</th>
-            <th colspan="3">वार्षिक परीक्षा (100 अंक)</th>
-            <th rowspan="2" style="width: 13%;">वार्षिक कुल<br>(100)</th>
-            <th rowspan="2" style="width: 11%;">ग्रेड</th>
+            <th rowspan="2" style="width: 30%;">विषय</th>
+            <th rowspan="2" style="width: 11%;">त्रैमासिक<br>(100)</th>
+            <th rowspan="2" style="width: 12%;">अर्द्धवार्षिक<br>(100)</th>
+            <th colspan="2">वार्षिक परीक्षा</th>
+            <th rowspan="2" style="width: 15%;">वार्षिक कुल<br>(100 अंक)</th>
+            <th rowspan="2" style="width: 12%;">ग्रेड</th>
           </tr>
           <tr>
-            <th style="width: 10%;">सैद्धांतिक</th>
-            <th style="width: 10%;">प्रायोगिक</th>
-            <th style="width: 10%;">योग</th>
+            <th style="width: 15%;">सैद्धांतिक</th>
+            <th style="width: 15%;">प्रायोगिक</th>
           </tr>
         </thead>
         <tbody id="subjectRows"></tbody>
@@ -216,8 +223,7 @@
             <td id="totHalf"></td>
             <td id="totAnnTh"></td>
             <td id="totAnnPr"></td>
-            <td id="totAnnSubSum"></td>
-            <td id="totFinalMarks" style="font-size: 11.5px;"></td>
+            <td id="totFinalMarks" style="font-size: 14px;"></td>
             <td id="totGrade"></td>
           </tr>
         </tfoot>
@@ -250,14 +256,14 @@
 
   <div class="summary-section">
     <div class="summary-text">
-      <p><strong>वार्षिक कुल प्राप्तांक :</strong> <span id="sTotal" class="dotted-data" style="font-size: 12px;"></span> (पूर्णांक: 500) &nbsp;&nbsp;&nbsp;&nbsp; <strong>शब्दों में :</strong> <span id="sTotalWords" class="dotted-data"></span></p>
-      <p><strong>प्रतिशत :</strong> <span id="sPercent" class="dotted-data"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>श्रेणी :</strong> <span id="sDivision" class="dotted-data"></span></p>
-      <p><strong>परीक्षाफल :</strong> <span id="sStatus" class="dotted-data" style="font-weight: 800;"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>ग्रेड :</strong> <span id="sGrade" class="dotted-data"></span></p>
+      <p><strong>वार्षिक कुल प्राप्तांक :</strong> <span id="sTotal" class="dotted-data" style="font-size: 15px;"></span> (पूर्णांक: 500) &nbsp;&nbsp;&nbsp;&nbsp; <strong>शब्दों में :</strong> <span id="sTotalWords" class="dotted-data"></span></p>
+      <p><strong>प्रतिशत :</strong> <span id="sPercent" class="dotted-data" style="font-size: 14px;"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>श्रेणी :</strong> <span id="sDivision" class="dotted-data" style="font-size: 14px;"></span></p>
+      <p><strong>परीक्षाफल :</strong> <span id="sStatus" class="dotted-data" style="font-weight: 800; font-size: 14.5px;"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>ग्रेड :</strong> <span id="sGrade" class="dotted-data" style="font-size: 14px;"></span></p>
       <p><strong>पूरक के विषय :</strong> <span id="sPurak" class="dotted-data">निरंक</span></p>
     </div>
 
     <div>
-      <table style="font-size: 8px;">
+      <table style="font-size: 10px;">
         <tr style="background: #334155; color: white;"><th colspan="2">ग्रेड स्केल (100 अंक)</th></tr>
         <tr><th>प्रतिशत</th><th>ग्रेड</th></tr>
         <tr><td>91 से अधिक</td><td>A+</td></tr>
@@ -281,7 +287,7 @@
 </div>
 
 <div class="print-btn-bar">
-  <button onclick="window.print()" style="padding: 7px 20px; font-size: 13px; font-weight: bold; background: #0f172a; color: white; border: none; border-radius: 4px; cursor: pointer;">अंकसूची प्रिंट करें (Print A4)</button>
+  <button onclick="window.print()" style="padding: 10px 26px; font-size: 15px; font-weight: bold; background: #0f172a; color: white; border: none; border-radius: 5px; cursor: pointer;">अंकसूची प्रिंट करें (Print A4)</button>
 </div>
 
 <script>
@@ -404,7 +410,6 @@
             <td>${half}</td>
             <td style="${isThFail ? 'color: red; font-weight: bold;' : ''}">${th}</td>
             <td>${pr}</td>
-            <td>${annTot}</td>
             <td><b>${annTot}</b></td>
             <td>${grade}</td>
           </tr>`;
@@ -417,7 +422,6 @@
         setElementText("totHalf", sumHalf);
         setElementText("totAnnTh", sumTh);
         setElementText("totAnnPr", sumPr);
-        setElementText("totAnnSubSum", grandTotal);
         setElementText("totFinalMarks", grandTotal);
 
         const pct = ((grandTotal / 500) * 100).toFixed(2);
