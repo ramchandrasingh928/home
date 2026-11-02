@@ -1,0 +1,502 @@
+
+school_home.html
+100%
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>सरस्वती शिशु मंदिर उच्चतर माध्यमिक विद्यालय रामानुजगंज</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #0f172a;
+      --saffron: #f97316;
+      --saffron-dark: #c2410c;
+      --accent-green: #15803d;
+      --bg-light: #f8fafc;
+      --text-main: #1e293b;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', 'Nirmala UI', sans-serif;
+    }
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Top Strip */
+    .top-strip {
+      background: linear-gradient(90deg, #b91c1c, #c2410c);
+      color: #fff;
+      padding: 6px 20px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+    }
+    .top-strip-marquee {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    /* Main Header */
+    header {
+      background: #ffffff;
+      border-bottom: 3px solid #f97316;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      padding: 16px 24px;
+    }
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .school-logo {
+      width: 85px;
+      height: 85px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    }
+    .school-title-box h1 {
+      font-size: 24px;
+      color: var(--primary-dark);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.3px;
+    }
+    .school-title-box h2 {
+      font-size: 15px;
+      color: var(--saffron-dark);
+      font-weight: 700;
+      margin-top: 4px;
+    }
+    .school-meta {
+      font-size: 12.5px;
+      color: #64748b;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: var(--primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      list-style: none;
+      overflow-x: auto;
+    }
+    .nav-container li a {
+      display: block;
+      padding: 12px 20px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-container li a:hover, .nav-container li a.active {
+      background: var(--saffron);
+      color: #ffffff;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+      color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .hero h3 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #fef08a;
+    }
+    .hero p {
+      font-size: 15px;
+      max-width: 720px;
+      margin: 0 auto 20px auto;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    /* Main Container */
+    .main-content {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 16px;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* Section Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 35px;
+    }
+    .action-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      padding: 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .action-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    }
+    .card-badge {
+      display: inline-block;
+      align-self: center;
+      background: #eff6ff;
+      color: var(--primary);
+      border: 1px solid #bfdbfe;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .action-card h4 {
+      font-size: 19px;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .action-card p {
+      font-size: 13.5px;
+      color: #475569;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .btn-action {
+      display: inline-block;
+      padding: 11px 22px;
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .btn-action:hover {
+      background: var(--saffron);
+    }
+    .btn-secondary {
+      background: var(--accent-green);
+    }
+    .btn-secondary:hover {
+      background: #166534;
+    }
+
+    /* Notice & Info Section */
+    .info-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+    .box-container {
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .box-header {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .box-header span {
+      color: var(--saffron);
+      font-size: 13px;
+    }
+    .notice-list {
+      list-style: none;
+    }
+    .notice-list li {
+      padding: 10px 0;
+      border-bottom: 1px dashed #cbd5e1;
+      font-size: 13.5px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .notice-list li:last-child {
+      border-bottom: none;
+    }
+    .notice-tag {
+      background: #fee2e2;
+      color: #b91c1c;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    /* School Stats */
+    .quick-links {
+      list-style: none;
+    }
+    .quick-links li {
+      margin-bottom: 10px;
+    }
+    .quick-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .quick-links a:hover {
+      color: var(--saffron-dark);
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-dark);
+      color: #94a3b8;
+      padding: 30px 20px 15px 20px;
+      font-size: 13px;
+      margin-top: auto;
+    }
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #334155;
+    }
+    .footer-col h5 {
+      color: #ffffff;
+      font-size: 15px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .footer-col p {
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 15px;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .school-title-box h1 {
+        font-size: 20px;
+      }
+      .info-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Strip -->
+  <div class="top-strip">
+    <div>हेल्पलाइन : परीक्षा शाखा, रामानुजगंज</div>
+    <div class="top-strip-marquee">
+      📢 वार्षिक परीक्षा सत्र 2025-26 के परीक्षा परिणाम ऑनलाइन जारी कर दिए गए हैं।
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="logo.png" alt="School Logo" class="school-logo" onerror="this.src='https://via.placeholder.com/85?text=SSM+Logo'">
+      <div class="school-title-box">
+        <h1>सरस्वती शिशु मंदिर उच्चतर माध्यमिक विद्यालय रामानुजगंज</h1>
+        <h2>जिला बलरामपुर - रामानुजगंज (छत्तीसगढ़) | पिनकोड: 497220</h2>
+        <div class="school-meta">
+          <span>यू-डाईस कोड: 22020501234</span> &nbsp;|&nbsp; 
+          <span>मान्यता प्राप्त : छत्तीसगढ़ माध्यमिक शिक्षा मण्डल (CGBSE)</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul class="nav-container">
+      <li><a href="index.html" class="active">मुख्य पृष्ठ (Home)</a></li>
+      <li><a href="class11.html">कक्षा 11वीं परीक्षा परिणाम</a></li>
+      <li><a href="middle.html">पूर्व माध्यमिक (कक्षा 6-8) परिणाम</a></li>
+      <li><a href="#notices">सूचना पटल (Notices)</a></li>
+      <li><a href="#contact">संपर्क करें</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h3>ऑनलाइन विद्यार्थी पोर्टल (Student Result Portal 2026)</h3>
+    <p>
+      विद्यार्थी अपना अनुक्रमांक (Roll Number) दर्ज करके वार्षिक प्रमाण पत्र सह अंकसूची देख सकते हैं तथा A4 साइज में रंगीन प्रिंट कर सकते हैं।
+    </p>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Action Cards -->
+    <div class="cards-grid">
+      
+      <!-- Card 1: 11th Result -->
+      <div class="action-card">
+        <div>
+          <span class="card-badge">सत्र 2025-26</span>
+          <h4>कक्षा 11वीं परीक्षा परिणाम</h4>
+          <p>
+            गणित (Maths), जीवविज्ञान (Biology) एवं वाणिज्य (Commerce) संकाय के वार्षिक परीक्षा परिणाम, त्रैमासिक व अर्द्धवार्षिक अंकों के साथ उपलब्ध हैं।
+          </p>
+        </div>
+        <a href="class11.html" class="btn-action">11वीं परिणाम देखें &rarr;</a>
+      </div>
+
+      <!-- Card 2: Middle Result -->
+      <div class="action-card">
+        <div>
+          <span class="card-badge" style="color: var(--accent-green); background: #dcfce7; border-color: #bbf7d0;">सत्र 2025-26</span>
+          <h4>पूर्व माध्यमिक परीक्षा परिणाम</h4>
+          <p>
+            कक्षा 6वीं से 8वीं तक के सभी 6 सैद्धांतिक व सह-शैक्षणिक विषयों के परिणाम एवं 30% अर्द्धवार्षिक + 70% वार्षिक अधिभार सह अंकसूची।
+          </p>
+        </div>
+        <a href="middle.html" class="btn-action btn-secondary">पूर्व माध्यमिक परिणाम देखें &rarr;</a>
+      </div>
+
+      <!-- Card 3: Notice Board -->
+      <div class="action-card">
+        <div>
+          <span class="card-badge" style="color: #c2410c; background: #ffedd5; border-color: #fed7aa;">कार्यालयीन निर्देश</span>
+          <h4>अंकसूची सत्यापन एवं पूरक परीक्षा</h4>
+          <p>
+            पूरक (Compartment) प्राप्त छात्र अपने विद्यालय कार्यालय में संपर्क कर पूरक परीक्षा फॉर्म निर्धारित तिथि से पूर्व जमा कराएं।
+          </p>
+        </div>
+        <a href="#notices" class="btn-action" style="background: #334155;">निर्देश पढ़ें &rarr;</a>
+      </div>
+
+    </div>
+
+    <!-- Notice & Info Layout -->
+    <div class="info-layout">
+      
+      <!-- Left: Recent Notices -->
+      <div class="box-container" id="notices">
+        <div class="box-header">
+          महत्वपूर्ण सूचनाएं एवं विज्ञप्ति
+          <span>नवीनतम अपडेट</span>
+        </div>
+        <ul class="notice-list">
+          <li>
+            <span class="notice-tag">नवीन</span>
+            <div>
+              <strong>वार्षिक परीक्षा 2026 अंकसूची ऑनलाइन जारी :</strong> छात्र एवं अभिभावक वेबसाइट से अपनी डिजिटल अंकसूची डाउनलोड व प्रिंट कर सकते हैं।
+            </div>
+          </li>
+          <li>
+            <span class="notice-tag">सूचना</span>
+            <div>
+              <strong>पूरक परीक्षा आवेदन :</strong> 1 या 2 विषय में पूरक घोषित छात्र 15 दिवस के भीतर विद्यालय परीक्षा शाखा में संपर्क करें।
+            </div>
+          </li>
+          <li>
+            <span class="notice-tag">प्रवेश</span>
+            <div>
+              <strong>सत्र 2026-27 नवीन प्रवेश :</strong> कक्षा नवमीं एवं ग्यारहवीं (विज्ञान व वाणिज्य) में प्रवेश हेतु पंजीयन प्रारंभ।
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Quick Links & Contact -->
+      <div class="box-container" id="contact">
+        <div class="box-header">
+          त्वरित संपर्क
+        </div>
+        <ul class="quick-links">
+          <li>📍 सरस्वती शिशु मंदिर, रामानुजगंज</li>
+          <li>🏛️ जिला: बलरामपुर (छत्तीसगढ़)</li>
+          <li>📞 फोन: विद्यालय कार्यालय</li>
+          <li>✉️ ईमेल: ssmramanujganj@gmail.com</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h5>सरस्वती शिशु मंदिर उ.मा.वि.</h5>
+        <p>रामानुजगंज, जिला बलरामपुर - रामानुजगंज, छत्तीसगढ़ - 497220</p>
+        <p>संस्कारक्षम शिक्षा एवं सर्वांगीण विकास का केंद्र</p>
+      </div>
+      <div class="footer-col">
+        <h5>महत्वपूर्ण पोर्टल लिंक</h5>
+        <p><a href="class11.html" style="color: #cbd5e1; text-decoration: none;">&bull; कक्षा 11वीं अंकसूची पोर्टल</a></p>
+        <p><a href="middle.html" style="color: #cbd5e1; text-decoration: none;">&bull; पूर्व माध्यमिक परीक्षा पोर्टल</a></p>
+        <p><a href="https://cgbse.nic.in" target="_blank" style="color: #cbd5e1; text-decoration: none;">&bull; छत्तीसगढ़ माध्यमिक शिक्षा मण्डल</a></p>
+      </div>
+      <div class="footer-col">
+        <h5>पोर्टल सहायता</h5>
+        <p>रिजल्ट या अंकसूची में किसी भी प्रकार की त्रुटि सुधार के लिए आवश्यक दस्तावेजों के साथ विद्यालय कार्यालय से संपर्क करें।</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 सरस्वती शिशु मंदिर उच्चतर माध्यमिक विद्यालय रामानुजगंज. सर्वाधिकार सुरक्षित.
+    </div>
+  </footer>
+
+</body>
+</html>
+Displaying school_home.html.
